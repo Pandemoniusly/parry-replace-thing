@@ -37,7 +37,7 @@ namespace IWontSugarCoatIt
         static GameObject loader = bundle.LoadAsset<GameObject>("f");
         public static GameObject Image = loader.transform.GetChild(0).GetChild(0).gameObject;
         public static GameObject Aud = loader.transform.GetChild(1).gameObject;
-        public static string ModPath = Path.Combine(Paths.PluginPath, "ImageGoesHere")
+        public static string ModPath = Path.Combine(Paths.PluginPath, "ImageGoesHere");
     }
  
     public class DAAYYM : MonoBehaviour
@@ -51,7 +51,7 @@ namespace IWontSugarCoatIt
             {
                 Parryflash = transform.Find("ParryFlash").gameObject;
                 Image = Instantiate(cAssets.Image);
-                Image.sprite = LoadPNG(Path.Combine(ModPath, "test.png"))
+                Image.sprite = LoadPNG(Path.Combine(ModPath, "test.png"));
                 Image.transform.SetParent(gameObject.transform);
                 Image.transform.localPosition = Vector3.zero;
                 Image.transform.localScale = new Vector3(4, 4, 4);
